@@ -69,6 +69,8 @@
   document.getElementById('glass').addEventListener('click', function() {
     waterGlass.addOne();
  
+    ga('send', 'event', 'Glass', 'Add One');
+
     _setGlass();
   });
 
@@ -76,6 +78,8 @@
     e.preventDefault();
 
     waterGlass.resetTotal();
+
+    ga('send', 'event', 'Glass', 'Reset');
 
     _setGlass();
   });
